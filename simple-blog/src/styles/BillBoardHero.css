@@ -1,12 +1,3 @@
-/* Reset and full-screen layout */
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: 'Arial', sans-serif; /* Font fallback */
-}
-
 /* Hero Section Styles */
 .hero-section {
   position: relative;
@@ -27,11 +18,11 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 10px solid #fff;  /* Optional: white border around the billboard */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);  /* Soft shadow for depth */
-  padding: 10px;  /* Padding to ensure video doesn't touch the edges */
+  border: 10px solid #fff; /* Optional: white border around the billboard */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+  padding: 10px; /* Padding to ensure video doesn't touch the edges */
   background-color: #000; /* Optional: black background behind the video */
-  z-index: 1;  /* Keeps the video inside the container */
+  z-index: 1; /* Keeps the video inside the container */
 }
 
 /* Video (Billboard) */

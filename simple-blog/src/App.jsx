@@ -1,13 +1,13 @@
-import SiteNavbar from "./components/Navbar";
 import BillBoardHero from "./components/BillBoardHero";
+import SiteNavbar from "./components/Navbar";
+import RecentPosts from "./components/RecentPosts";
 
 function App() {
   return (
-    <div>
-    
-      <SiteNavbar/>
-      <BillBoardHero/>
-    
+    <div className="App">
+      <SiteNavbar />
+      <BillBoardHero />
+      <RecentPosts />
     </div>
   );
 }
