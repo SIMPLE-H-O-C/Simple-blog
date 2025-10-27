@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/RecentPosts.css";
 
 const dummyPosts = [
@@ -31,7 +32,7 @@ const dummyPosts = [
   {
     id: 4,
     title: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",  
+    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
     author: "Person",
     date: "September 29, 2025",
     imageUrl: "https://placehold.co/600x400",
@@ -54,35 +55,41 @@ const dummyPosts = [
     date: "September 25, 2025",
     imageUrl: "https://placehold.co/600x400",
     link: "#",
-  }
+  },
 ];
 
 export default function RecentPosts() {
   return (
-    <section className="recent-posts">
-      <div className="container">
-        <h2 className="section-title">Recent Posts</h2>
+    <section className="recent-posts-section">
+      <div className="recent-posts-container">
+        <h2 className="recent-posts-title">Recent Posts</h2>
 
-        <div className="posts-grid">
+        <div className="recent-posts-grid">
           {dummyPosts.map((post) => (
-            <a key={post.id} href={post.link} className="post-card">
-              <div className="post-image">
+            <Link
+              key={post.id}
+              to={`/post/${post.id}`}
+              className="recent-post-card"
+            >
+              <div className="recent-post-image">
                 <img src={post.imageUrl} alt={post.title} />
               </div>
-              <div className="post-info">
-                <h3 className="post-title">{post.title}</h3>
-                <p className="post-text">{post.text}</p>
-                <div className="post-meta">
-                  <span className="post-author">by {post.author}</span>
-                  <span className="post-date">{post.date}</span>
+              <div className="recent-post-info">
+                <h3 className="recent-post-title">{post.title}</h3>
+                <p className="recent-post-text">{post.text}</p>
+                <div className="recent-post-meta">
+                  <span className="recent-post-author">by {post.author}</span>
+                  <span className="recent-post-date">{post.date}</span>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
-        <div className="see-more-container">
-          <button className="see-more-btn">See More</button>
+        <div className="recent-post-see-more-container">
+          <Link to="/posts" className="recent-post-see-more-btn">
+            See More
+          </Link>
         </div>
       </div>
     </section>

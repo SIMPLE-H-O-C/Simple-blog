@@ -1,0 +1,127 @@
+.posts-page {
+  background-color: #fff;
+  color: #333;
+  padding: 140px 20px 80px 20px;
+}
+
+.posts-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  color: #d28e01;
+  font-weight: bold;
+}
+
+/* GRID LAYOUT */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* POST CARD */
+.post-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.106);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d28e01;
+}
+
+.post-card:hover .post-title {
+  color: #d28e01;
+}
+
+/* IMAGE */
+.post-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* INFO */
+.post-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* TITLE */
+.post-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+/* EXCERPT */
+.post-excerpt {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+/* META */
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+.post-meta .post-author {
+  font-weight: 500;
+  color: #d28e01;
+}
+
+/* READ MORE BUTTON */
+.read-more-btn {
+  align-self: flex-start;
+  background-color: #d28e01;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #ffffff;
+  color: #d28e01;
+  transform: translateY(-2px);
+}
