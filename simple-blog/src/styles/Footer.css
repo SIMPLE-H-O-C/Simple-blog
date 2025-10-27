@@ -1,0 +1,113 @@
+.footer-section {
+  background-color: #fff;
+  color: #fff;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* === Logo Section === */
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  height: 80px; /* Increased size */
+  width: auto;
+  border-radius: 10px;
+  border: 2px solid;
+  background: transparent;
+  box-shadow: 0 0 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+.footer-title {
+  font-weight: 700;
+  color: #d28e01 ;
+  font-size: 1.8rem;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* === Headings & Text === */
+.footer-heading {
+  color: #d28e01;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: black;
+  line-height: 1.6;
+}
+
+/* === Links === */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #d28e01 ;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+}
+
+/* === Social Icons === */
+.social-icon {
+  color: #d28e01 ;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: rgba(255, 227, 69, 0.842);
+  transform: scale(1.2);
+}
+
+/* === Subscribe Section === */
+.footer-input {
+  background-color: #fff;
+  border: 1px solid #d28e01 ;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-input::placeholder {
+  color: #ccc;
+}
+
+.btn-gold {
+  background-color: #d28e01;
+  color: black;
+  font-weight: 600;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #d28e01 ;
+  color: white;
+}
+
+/* === Bottom Copyright === */
+.border-gold {
+  border-top: 1px solid #d28e01 ;
+  margin-top: 2rem;
+}
+
+.footer-copy {
+  color: #ccc;
+  font-size: 0.9rem;
+}
