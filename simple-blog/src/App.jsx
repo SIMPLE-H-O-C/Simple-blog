@@ -1,15 +1,15 @@
-import './App.css'
-
-import RecentPosts from './components/RecentPosts'
+import SiteNavbar from "./components/Navbar";
+import BillBoardHero from "./components/BillBoardHero";
 
 function App() {
   return (
-    <div className="App">
-      {/* other sections/components */}
-      <RecentPosts />
-      {/* more components */}
+    <div>
+    
+      <SiteNavbar/>
+      <BillBoardHero/>
+    
     </div>
   );
 }
 
-export default App
+export default App;

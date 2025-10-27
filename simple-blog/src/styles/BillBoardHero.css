@@ -1,0 +1,149 @@
+/* Reset and full-screen layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Font fallback */
+}
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* black fallback for video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Billboard Container Styles */
+.billboard-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #fff;  /* Optional: white border around the billboard */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);  /* Soft shadow for depth */
+  padding: 10px;  /* Padding to ensure video doesn't touch the edges */
+  background-color: #000; /* Optional: black background behind the video */
+  z-index: 1;  /* Keeps the video inside the container */
+}
+
+/* Video (Billboard) */
+.billboard-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+  z-index: 1; /* Keep it in the background */
+}
+
+/* Hero Overlay Styles */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.45)
+  ); /* Dark gradient for contrast */
+  z-index: 2; /* Place above the video */
+  padding: 20px; /* Spacing inside the overlay */
+  color: #fff; /* Text color */
+}
+
+/* Glassmorphism Effect for Content */
+.glass-content {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+  backdrop-filter: blur(12px); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* Soft border */
+  padding: 40px 60px;
+  border-radius: 20px;
+  max-width: 700px; /* Maximum width for the content */
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  z-index: 3; /* Keep content on top */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+/* Hero Title and Subtitle */
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #f1f1f1;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.hero-btn {
+  background-color: #d28e01; /* Gold accent color */
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 30px; /* Adjusted padding for better proportions */
+  font-weight: 500;
+  font-size: 1rem; /* Font size for the button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #b57800;
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  /* Adjusting text sizes for smaller screens */
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .glass-content {
+    padding: 25px 30px;
+    max-width: 600px; /* Reduced max-width on smaller screens */
+  }
+
+  .hero-btn {
+    font-size: 0.9rem; /* Slightly smaller button on mobile */
+    padding: 10px 25px; /* Adjusted padding */
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.75rem; /* Smaller title for smaller screens */
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem; /* Smaller subtitle text */
+  }
+
+  .glass-content {
+    padding: 20px 25px; /* More compact content padding */
+    max-width: 90%; /* Allow the content to take more space on small screens */
+  }
+
+  .hero-btn {
+    font-size: 0.85rem; /* Button size for mobile */
+    padding: 8px 20px; /* More compact button */
+  }
+}
