@@ -7,6 +7,7 @@ function App() {
     
       <SiteNavbar/>
       <BillBoardHero/>
+    
     </div>
   );
 }
