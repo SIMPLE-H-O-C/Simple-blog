@@ -1,0 +1,130 @@
+.recent-posts {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 60px 20px;
+}
+
+.recent-posts .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #d28e01;
+  font-weight: bold;
+}
+
+/* GRID */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.post-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d28e01;
+}
+
+.post-card:hover .post-title {
+  color: #d28e01;
+}
+
+/* IMAGE */
+.post-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* INFO */
+.post-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* TITLE */
+.post-title {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s;
+}
+
+/* META */
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.post-meta .post-author {
+  font-weight: 500;
+  color: #d28e01;
+}
+
+/* SEE MORE BUTTON */
+.see-more-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.see-more-btn {
+  background-color: #d28e01;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #ffffff;
+  color: #d28e01;
+  transform: translateY(-2px);
+}
